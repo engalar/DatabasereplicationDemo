@@ -1,0 +1,14 @@
+version: "2.3"
+
+services:
+    db:
+        image: mysql:8
+        environment:
+            - MYSQL_USER=mendix
+            - MYSQL_PASSWORD=mendix
+            - MYSQL_DATABASE=mendix
+            - MYSQL_ROOT_PASSWORD=root
+        ports:
+            - 3306:3306
+        volumes:
+            - ./mysql.cnf:/etc/mysql/conf.d/mysql.cnf
